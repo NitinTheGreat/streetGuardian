@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+      
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+        <a href="{{ url_for('index') }}">
+          <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo"></a>
+    </div>
+    <ul class="menu">
+        <li><a href="{{ url_for('about') }}">About Us</a></li>
+        <li><a href="{{ url_for('casestudy') }}">Case Studies</a></li>
+        <li><a href="#">Contribute</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+    </ul>
+    <div class="button-nav">
+        <a href="{{ url_for('admin_login') }}"><button class="admin-login-button">Admin Login</button></a>
+        <a href="{{ url_for('share_sighting') }}"><button class="sighting-button">Share A Sighting</button></a>
+    </div>
+</div>
+<!-- navbar ends hereeeeeeeeeeee -->
+<div class="responsive-container-block bigContainer">
+  <div class="responsive-container-block Container">
+      <div class="imgContainer">
+          <img class="blueDots" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/aw3.svg">
+          <img class="mainImg" src="{{ url_for('static', filename='images/about.jpg') }}">
+      </div>
+      <div class="responsive-container-block textSide">
+          <p class="text-blk heading">
+              About Us
+          </p>
+          <p class="text-blk subHeading">
+              We are a team of passionate and skilled coders who work together to create amazing web applications. We have diverse backgrounds and expertise in different technologies, such as HTML, CSS, JavaScript, Python and Django. We value collaboration, learning, and innovation, and we always strive to deliver high-quality products that meet our clients' needs and expectations. We are not just a team, we are a family of coders who support each other and have fun along the way.
+          </p>
+          <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+              <div class="cardImgContainer">
+                  <img class="cardImg" src="https://media.licdn.com/dms/image/D5603AQHWPYK4kc7Wqw/profile-displayphoto-shrink_800_800/0/1703666598927?e=1715212800&v=beta&t=xVe6PIVnlwbjfqDxgGKwvk6lkBQ1z6s-FeOllkqS7YM">
+              </div>
+              <div class="cardText">
+                  <p class="text-blk cardHeading">
+                      Nitin
+                  </p>
+                  <p class="text-blk cardSubHeading">
+                      Our glorious leader paving our way to success.
+                  </p>
+              </div>
+          </div>
+          <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+              <div class="cardImgContainer">
+                  <img class="cardImg" src="https://media.licdn.com/dms/image/D5603AQEp8ZzBye6Fbw/profile-displayphoto-shrink_800_800/0/1705131646157?e=1715212800&v=beta&t=GKDfllBpTpT60RStQCCFP61fQQgZF41MGe_dJGKjVcw">
+              </div>
+              <div class="cardText">
+                  <p class="text-blk cardHeading">
+                      Mahin
+                  </p>
+                  <p class="text-blk cardSubHeading">
+                      A gifted inventor, who can build websites with cutting-edge methods.
+                  </p>
+              </div>
+          </div>
+          <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+              <div class="cardImgContainer">
+                  <img class="cardImg" src="https://media.licdn.com/dms/image/D4D03AQGZ774HVZ3NxA/profile-displayphoto-shrink_800_800/0/1691223240427?e=1715212800&v=beta&t=Z069MjW3e5Joy7FBgHy2EqBZ0bGwUu0FoHpzix_abfg">
+              </div>
+              <div class="cardText">
+                  <p class="text-blk cardHeading">
+                      Srijan
+                  </p>
+                  <p class="text-blk cardSubHeading">
+                      A genius creator, who can design websites with advanced techniques....
+                  </p>
+              </div>
+          </div>
+          <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+              <div class="cardImgContainer">
+                  <img class="cardImg" src="https://media.licdn.com/dms/image/D4D35AQGFbXewrKuK4Q/profile-framedphoto-shrink_800_800/0/1696367686518?e=1710612000&v=beta&t=z8t6aTjyasUDPz3-xhFMMYf84cpdDUW4cyQe0IqzCoM">
+              </div>
+              <div class="cardText">
+                  <p class="text-blk cardHeading">
+                      Shreya 
+                  </p>
+                  <p class="text-blk cardSubHeading">
+                      Our elite designer who excels in UI/UX....
+                  </p>
+              </div>
+          </div>
+          <a>
+              <button class="explore">
+                  Explore our Services
+              </button>
+          </a>
+      </div>
+      <img class="redDots" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/cw3.svg">
+  </div>
+</div>
+
+</body>
+</html>

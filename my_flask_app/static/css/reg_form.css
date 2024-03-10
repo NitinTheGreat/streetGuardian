@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 20px 20px; /* Added top padding to accommodate fixed navbar */
+  background: linear-gradient(to bottom, #825ee6, #55b7ff);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  /* overflow: hidden; */
+  overflow-x: hidden;
+}
+
+.navbar {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 21px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+
+.logo img {
+  margin-top: 5px;
+      height: 8vh;
+  width: auto;
+  margin-left: 27px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5vw;
+  justify-content: flex-start;
+}
+
+.menu li {
+  left: 10px;
+  margin-right: 20px;
+  font-size: 17px;
+  font-weight: 400;
+}
+.menu li :hover{
+cursor: pointer;
+text-decoration: underline;
+color: #000;
+}
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #000;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 0 10px;
+  right: 30%;
+}
+
+.search-input {
+  border: 1px solid rgb(46, 27, 46);
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 20px;
+  margin-right: 5px;
+}
+.icons img {
+  height: 30px;
+  width: auto;
+}
+.button-nav{
+  display: flex;
+  gap: 30px;
+}
+.admin-login-button {
+  background: linear-gradient(to right, #6200ea, #bb86fc);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 18px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.admin-login-button:hover {
+  background: linear-gradient(to right, #bb86fc, #6200ea);
+  cursor: pointer;
+  text-decoration: underline;
+  /* transition: all 15s ease; */
+}
+.sighting-button{
+  background: linear-gradient(to right, #6200ea, #bb86fc);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 18px;
+  font-size: 16px;
+  
+}
+  .sighting-button:hover {
+      background: linear-gradient(to right, #bb86fc, #6200ea);
+      cursor: pointer;
+      text-decoration: underline;
+  }
+
+
+  /* Nav bar ends hereeeeeeeeeeeeeeeeeeeee */
+.container {
+  position: relative;
+  max-width: 700px;
+  margin-top: 20vh;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.container header {
+  font-size: 1.5rem;
+  color: #875bd8;
+  font-weight: 500;
+  text-align: center;
+}
+.container .form {
+  margin-top: 30px;
+}
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+.input-box label {
+  color: #333;
+}
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+.form .gender-box {
+  margin-top: 20px;
+}
+.gender-box h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.form :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.form .gender {
+  column-gap: 5px;
+}
+.gender input {
+  accent-color: rgba(130, 109, 236, 0.821);
+}
+.form :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+.gender label {
+  color: #707070;
+}
+.address :where(input, .select-box) {
+  margin-top: 15px;
+}
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+.form button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgb(130, 106, 251);
+}
+.form button:hover {
+  background: rgb(88, 56, 250);
+}
+
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+}
