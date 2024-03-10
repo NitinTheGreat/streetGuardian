@@ -1,13 +1,67 @@
-<!-- Dashboard HTML code -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Toggle Container</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/dashboard.css')}}">
+    <!-- <link rel="stylesheet" href="dashboard.css"> -->
 </head>
 <body>
-    <h1>Welcome to the Dashboard</h1>
-    <!-- Add your dashboard content here -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo">
+            </a>
+        </div>
+        <ul class="menu">
+            <!-- <li><a href="about.html">About Us</a></li> -->
+            <li><a href="{{ url_for('about') }}">About Us</a></li>
+            <!-- <li><a href="case-study.html">Case Studies</a></li> -->
+            <li><a href="{{ url_for('casestudy') }}">Case Studies</a></li>
+
+            <li><a href="#">Contribute</a></li>
+            <li><a href="#">Help</a></li>
+            <!-- <li><a href="contact.html">Contact Us</a></li> -->
+            <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+        </ul>
+        <div class="button-nav">
+            <!-- <a href="SignUp.html"><button class="admin-login-button">Admin Login</button></a>
+            <a href="form.html"><button class="sighting-button">Share A Sighting</button></a> -->
+            <a href="{{ url_for('admin_login') }}"><button class="admin-login-button">Admin Login</button></a>
+<a href="{{ url_for('share_sighting') }}"><button class="sighting-button">Share A Sighting</button></a>
+
+
+        </div>
+    </div>
+<!-- navbar ends hereeeeeeeeeeee -->
+<div class="full">
+    {% for registration in registrations %}
+    <div class="container">
+        <div class="header" onclick="toggleContent(this)">
+            <div id="container">
+                <span id="outertext">Name  :  </span>&nbsp;<span id="outer">{{  registration.full_name }}</span>
+            </div>
+            
+
+            <span class="arrow">▼</span>
+        </div>
+        <div class="content">
+            <p><span class="innertext">Birth Date:</span> <span class="innerdb">{{ registration.birth_date }}</span></p>
+            <p><span class="innertext">Phone Number:</span> <span class="innerdb">{{ registration.phone_number }}</span></p>
+            <p><span class="innertext">Email:</span> <span class="innerdb">{{ registration.email }}</span></p>
+            <p><span class="innertext">Gender:</span> <span class="innerdb">{{ registration.gender }}</span></p>
+            <p><span class="innertext">Unsheltered Full Name:</span> <span class="innerdb">{{ registration.unsheltered_full_name }}</span></p>
+            <p><span class="innertext">Unsheltered Location:</span> <span class="innerdb">{{ registration.unsheltered_location }}</span></p>
+            <p><span class="innertext">State:</span> <span class="innerdb">{{ registration.state }}</span></p>
+            <p><span class="innertext">City:</span> <span class="innerdb">{{ registration.city }}</span></p>
+            <p><span class="innertext">Region:</span> <span class="innerdb">{{ registration.region }}</span></p>
+            <p><span class="innertext">Postal Code:</span> <span class="innerdb">{{ registration.postal_code }}</span></p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
 </body>
 </html>

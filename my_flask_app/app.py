@@ -105,7 +105,12 @@ def login():
 
 @app.route('/dashboard')
 def dashboard():
-    return render_template('dashboard.html')
+    cursor = db.cursor(dictionary=True)  # This will return data as dictionaries instead of tuples
+    cursor.execute("SELECT * FROM registrations")
+    registrations = cursor.fetchall()
+    cursor.close()
+    return render_template('dashboard.html', registrations=registrations)
 
+    
 if __name__ == '__main__':
     app.run(debug=True)
