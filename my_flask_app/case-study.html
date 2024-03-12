@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <title>Homelessness Case Study</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/case-study.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo"></a>
+        </div>
+        <ul class="menu">
+            <li><a href="{{ url_for('about') }}">About Us</a></li>
+            <li><a href="{{ url_for('casestudy') }}">Case Studies</a></li>
+            <li><a href="#">Contribute</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+        </ul>
+        <div class="button-nav">
+            <a href="{{ url_for('admin_login') }}"><button class="admin-login-button">Admin Login</button></a>
+            <a href="{{ url_for('share_sighting') }}"><button class="sighting-button">Share A Sighting</button></a>
+        </div>
+    </div>
+  <header>
+    <h1>Case Study: Addressing Homelessness in Our Community</h1>
+  </header>
+
+  <main class="content">
+    <article>
+      <h2>Introduction</h2>
+      <p>Homelessness is a pressing issue affecting individuals and families in our community. In this case study, we'll explore how our organization is addressing homelessness through various initiatives and programs.</p>
+
+      <h2>The Challenge</h2>
+      <p>Despite efforts to address homelessness, many individuals continue to face housing insecurity due to factors such as unemployment, poverty, mental illness, and substance abuse.</p>
+
+      <h2>Our Approach</h2>
+      <p>At Our Organization, we take a holistic approach to combating homelessness. We provide a range of services including shelter assistance, food distribution, healthcare access, job training, and community outreach.</p>
+
+      <h2>Impact</h2>
+      <p>Through our programs and partnerships, we've been able to make a significant impact in reducing homelessness in our community. We've helped hundreds of individuals find stable housing, secure employment, and access essential resources.</p>
+
+      <h2>Case Study Highlights</h2>
+      <ul>
+        <li>Provided shelter to over 200 individuals in the past year</li>
+        <li>Distributed thousands of meals to those in need</li>
+        <li>Facilitated job training programs resulting in a 75% employment rate among participants</li>
+        <li>Partnered with local healthcare providers to offer free medical services to the homeless population</li>
+      </ul>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Our Organization. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
