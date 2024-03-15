@@ -5,10 +5,10 @@ app = Flask(__name__)
 
 # MySQL connection configuration
 db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="thegreat1",
-    database="street_guardian_db"
+    host="bgawwc2bexdkyqfcu0qy-mysql.services.clever-cloud.com",
+    user="ufyfyr7w4tiicbly",
+    password="USklx5mHT2zkVOt3nHYA",
+    database="bgawwc2bexdkyqfcu0qy"
 )
 
 @app.route('/')
